@@ -6,10 +6,7 @@ jobs:
   calculate-and-send:
     runs-on: ubuntu-latest
     steps:
-      - name: Check Zotero Env
-        run: |
-          echo "ZOTERO_ID=$ZOTERO_ID"
-          echo "ZOTERO_KEY=$ZOTERO_KEY"
+
       - name: Checkout
         uses: actions/checkout@v6
       #  with:
@@ -36,3 +33,7 @@ jobs:
           echo "Use custom config: "
           cat config/custom.yaml
           uv run src/zotero_arxiv_daily/main.py
+      - name: Check Zotero Env
+        run: |
+          echo "ZOTERO_ID=$ZOTERO_ID"
+          echo "ZOTERO_KEY=$ZOTERO_KEY"
