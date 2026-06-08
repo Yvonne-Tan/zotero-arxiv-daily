@@ -6,8 +6,8 @@ jobs:
   calculate-and-send:
     runs-on: ubuntu-latest
     steps:
-      - name: Check Xotero Env
-        run:
+      - name: Check Zotero Env
+        run: |
           echo "ZOTERO_ID=$ZOTERO_ID"
           echo "ZOTERO_KEY=$ZOTERO_KEY"
       - name: Checkout
