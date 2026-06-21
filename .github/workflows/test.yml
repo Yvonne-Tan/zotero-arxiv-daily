@@ -28,9 +28,6 @@ jobs:
           OPENAI_API_BASE: ${{ secrets.OPENAI_API_BASE }}
           CUSTOM_CONFIG: ${{ vars.CUSTOM_CONFIG }}
         run: |
-          echo "ZOTERO_ID=$ZOTERO_ID"
-          echo "ZOTERO_KEY=$ZOTERO_KEY"
-
           export DEBUG=true
           printf "%b\n" "$CUSTOM_CONFIG" > config/custom.yaml
           echo "Use custom config: "
